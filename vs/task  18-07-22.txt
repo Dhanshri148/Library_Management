@@ -1,0 +1,333 @@
+Task 18-07-2022
+1)
+
+
+using System;
+class HelloWorld 
+{
+   static public void Main(String[] args)
+  {
+    Console.WriteLine("Encapsulation of variables");
+    
+    Demo1 obj = new Demo1();
+
+	obj.ID = 10;
+
+	obj.name="Dhanshri";
+
+	Console.WriteLine("ID: "+obj.ID);
+	Console.WriteLine("Name: "+obj.name);
+  }
+}
+
+class Demo1
+{
+
+	public int ID{get;set;}
+	
+	public string name{get;set;}
+}
+
+
+class Encapsulation
+{  
+   
+	Demo1 obj=new Demo1();
+
+	obj.id = 10;
+
+	obj.name="Dhanshri";
+
+	Console.WriteLine("ID: "+obj.id);
+	Console.WriteLine("Name: "+obj.name);
+}
+
+
+2)-----------------------------------------------------------------------
+
+using System;
+class HelloWorld 
+{
+  public static void Main(String[] args) 
+  {
+        Console.WriteLine("Addition of two number using parameterised constructor");
+    
+        Add a = new Add(10,20);
+    
+        Add b = new Add("Hello","World");
+    
+        a.show();
+        b.show1();
+  }
+}
+
+class Add
+{
+    int num1,num2,num3;
+    string str,str1,str2;
+    
+    public Add(int num1,int num2)
+    {
+        this.num1=num1;
+        this.num2=num2;
+        num3 = num1+num2;
+    }
+    public Add(string str1,string str2)
+    {
+        this.str1=str1;
+        this.str2=str2;
+        str=str1+str2;
+    }
+    public void show()
+    {
+        Console.WriteLine("Addition of two numbers:"+num3);
+        
+    }
+    
+     public void show1()
+    {
+        Console.WriteLine("Addtion of two strings:"+str);
+    }
+}
+
+
+
+3)---------------------------------------------------------
+
+
+using System;
+class HelloWorld 
+{
+  public static void Main() 
+  {
+    Console.WriteLine("Inheritance in .NET");
+    
+    B b=new B();
+    
+    b.show();
+    
+    Console.WriteLine("Id="+b.id+" Name="+b.name);
+    
+  }
+}
+
+class A
+{
+    public int id=10;
+    
+    public void show()
+    {
+        Console.WriteLine("This is base class");
+    }
+}
+
+class B:A
+{
+    public string name="Dhanshri";
+    
+}
+
+
+4)--------------------------------------------------------------------
+
+using System;
+class HelloWorld 
+{
+  public static void Main() 
+  {
+    Console.WriteLine("Static Constructor");
+    
+    B objB = new B();
+    Console.WriteLine();
+    
+    A objA = new B();
+    
+  }
+}
+
+class A
+{
+    static A()
+    {
+        Console.WriteLine("Type Constuctor A is invoked");
+    }
+    
+    public A()
+    {
+        Console.WriteLine("Instance Constructor of A is invoked");
+    }
+}
+
+class B:A
+{
+    static B()
+    {
+        Console.WriteLine("Type Constuctor B is invoked");
+    }
+    
+    public B()
+    {
+        Console.WriteLine("Instance Constructor of B is invoked");
+    }
+}
+
+
+
+5)-----------------------------------------------------------------------
+
+using System;
+class HelloWorld
+{
+  public static void Main() 
+  {
+    Console.WriteLine("Abstraction");
+    
+    Car c = new Car();
+    c.DriveVehicle();
+    c.display();
+    
+  }
+}
+
+abstract class Drive
+{
+    public abstract void DriveVehicle();
+    
+    public void display()
+    {
+        Console.WriteLine("This is an abstract class");
+    }
+    
+}
+
+class Car : Drive
+{
+    public override void DriveVehicle()
+    {
+        Console.WriteLine("Driver drive the car");
+    }
+}
+
+
+
+6)-----------------------------------------------------------------------
+
+using System;
+class HelloWorld 
+{
+  public static void Main() 
+  {
+    Console.WriteLine("Aggregation");
+    studDetails sd = new studDetails("Ahmednagar",24);
+    Student s = new Student(10,"Dhanshri",sd);
+    s.display();
+    
+  }
+}
+
+public class studDetails
+{
+    public string address;
+    public int age;
+    public studDetails(string address,int age)
+    {
+        this.address=address;
+        this.age=age;
+        
+    }
+}
+
+public class Student
+{
+    public int id;
+    public string name;
+    public studDetails studDetails;
+    
+    public Student(int id,string name,studDetails studDetails)
+    {
+        this.id = id;
+        this.name = name;
+        this.studDetails = studDetails;
+    }
+    
+    public void display()
+    {
+        Console.WriteLine("Id="+id+" Name="+name+" Address="+studDetails.address+" Age="+studDetails.age);
+        
+    }
+}
+
+7)----------------------------------------------------------------------------
+
+using System;
+class Indexer 
+{
+  public static void Main() 
+  {
+    Console.WriteLine("Indexer");
+    
+    Data obj = new Data();
+    obj[0] = "Dhanshri";
+    obj[1] = "Archana";
+    obj[2] = "Ana";
+    
+    for(int i=0;i<4;i++)
+    {
+        Console.WriteLine(obj[i]);
+    }
+    Console.ReadKey();
+  }
+}
+
+class Data
+{
+    public string[] name = new string[4];
+
+    public string this[int id]
+    {
+        get
+        {
+            return name[id];
+        }
+        set
+        {
+            name[id] = value;
+        }
+        
+    }
+    
+}
+
+8)---------------------------------------------------------------------
+
+
+using System;
+class Interfaces 
+{
+  
+  public static void Main()
+  {
+    Console.WriteLine("Interfaces");
+    Demo obj = new Demo();
+    obj.m();
+    (obj as IDemo).m();
+    (obj as IAnotherDemo).n();
+    
+  }
+}
+
+interface IDemo
+    {
+         void m();
+    }
+interface IAnotherDemo : IDemo
+    {
+         void n();
+    }
+class Demo : IAnotherDemo
+{
+     void m()
+     {
+          Console.WriteLine("This is Demo method");
+     }
+}

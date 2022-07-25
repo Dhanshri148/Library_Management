@@ -1,0 +1,36 @@
+Assignment:
+1.	Enhance the application to prompt the user for their name and display it along with the date and time.
+2.	Perform an example of using an empty string.
+3.	Make a console application to get user input from user and convert it to integer.
+Make a console application to print prime numbers.
+5.	Make a console application to check number entered by the 
+4.	Make a console application to print prime numbers.
+5.	Make a console application to check number entered by the user is Odd or even.
+and try to explore more functions
+6.	Make a console application to show difference between structure and class/ value-type and reference type.
+7.	Perform printing square root of given number using pass by value and pass by reference and pass by out.
+8.	Perform an example using tryParse function. (Factory method pattern)
+9.	Read and print elements of array in C# .NET.
+
+
+5.	Implement single dimension array and double dimension array for any example.
+6.	Implement ArrayList for any example.
+7.	Show type casting (Implicit & Explicit) using any example.
+
+
+1.	Perform Type-casting: Implicit & Explicit with an example.
+2.	Polymorphism:  overloading and overriding with an example.
+3.	Perform an example using “As” type casting operator.
+
+
+
+Task 18-07-22
+
+1.	Make a program to perform an encapsulation.
+2.	How we can perform Inheritance in .NET?
+3.	Make a program to print addition of two numbers using parameterized constructor and show constructor overloading.
+4.	Using the above definition, show the implementation of static constructor.
+5.	Perform abstraction using any example. 
+6.	Perform Aggregation on objects.
+7.	Implement the concepts of property, method and indexer using getter setter.
+8.	Implement the concept of interface using an example of converting user input into uppercase.

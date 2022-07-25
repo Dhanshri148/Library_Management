@@ -1,0 +1,3 @@
+<script>
+	Registration successful
+</script>
